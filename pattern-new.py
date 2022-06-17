@@ -1,3 +1,8 @@
+# find pattern in images. The system will present 4 choice, PCA+KNN, MobileNet v2 and LDA.
+#For each algorithm, we will start from training then validate the model with validation set,
+#finally plot the heatmaps to show prediction results.And for each method, actually we did twice. The first time we randomly choose 280000 or
+#10000 training images
+
 import cv2
 from matplotlib import pyplot as plt
 import matplotlib.image as mpimg
@@ -24,16 +29,7 @@ plt.subplot(222),plt.imshow(cnn2)
 plt.subplot(223),plt.imshow(cnn3)
 plt.title('Result after equalization for knn')
 plt.subplot(224),plt.imshow(cnn4)
-Out[9]: (<matplotlib.axes._subplots.AxesSubplot at 0x13f5e3860>,
-<matplotlib.image.AxesImage at 0x13f6317b8>)
-
 ##LDA
-Initially, the training set is 100000, the validation set is 4000. We tried to use 280000 images to train,
-but there will be memory error, thus we shrink the size to 100000 images.
-The average accuracy is 32.7%.
-Then, using 3750 training images for each category, totally 30000 training images.
-The average accuracy is 27.2%.
-In [7]: lda1 = cv2.imread('./LDA.png')
 lda2 = mpimg.imread('plot_lda1.png')
 lda3 = mpimg.imread('LDA2.png')
 lda4 = mpimg.imread('plot_lda2.png')
@@ -44,11 +40,6 @@ plt.subplot(222),plt.imshow(lda2)
 plt.subplot(223),plt.imshow(lda3)
 plt.title('Result after equalization for LDA')
 plt.subplot(224),plt.imshow(lda4)
-""" the training set is 280000, the validation set is 4000. Based on the above results, the performance
-rank is  v2(38.47%) > KNN(36.8%) > LDA(32.7%).
-Model has the best performance with the accuracy of 38.47%, LDA is the worst
-one with the accuracy of 32.7%.
-However, all of them have bad result. Hundreds of images are distributed to first two cateegories"""
 
 import numpy as np
 import pandas as pd
