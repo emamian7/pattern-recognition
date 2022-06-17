@@ -13,15 +13,7 @@ plt.subplot(222),plt.imshow(knn2)
 plt.subplot(223),plt.imshow(knn3)
 plt.title('Result after equalization for knn')
 plt.subplot(224),plt.imshow(knn4)
-Populating the interactive namespace from numpy and matplotlib
-Out[6]: (<matplotlib.axes._subplots.AxesSubplot at 0x1305d08d0>,
-<matplotlib.image.AxesImage at 0x131242828>)
-##4.2 Mobilenet v2
-The training set is 150000, the validation set is 4000.
-
-"""The validation accuracy is 38.47%
-Then, using 3750 training images for each category, totally 30000 training images.
-The validation accuracy is 33.0%.""" cnn1 = mpimg.imread('MBN1.png')
+cnn1 = mpimg.imread('MBN1.png')
 cnn2 = mpimg.imread('plot_cnn1.png')
 cnn3 = mpimg.imread('MBN2.png')
 cnn4 = mpimg.imread('plot_knn2.png')
