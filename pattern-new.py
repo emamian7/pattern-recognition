@@ -1,7 +1,6 @@
-# find pattern in images. The system will present 4 choice, PCA+KNN, MobileNet v2 and LDA.
-#For each algorithm, we will start from training then validate the model with validation set,
-#finally plot the heatmaps to show prediction results.And for each method, actually we did twice. The first time we randomly choose 280000 or
-#10000 training images
+# find patterns in images. The code will present 4 choices, PCA+KNN, MobileNet v2 and LDA.
+#For each algorithm, started from training then validate the model with validation set,
+#finally plot the heatmaps to show prediction results.
 
 import cv2
 from matplotlib import pyplot as plt
